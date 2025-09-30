@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    #nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background: #d11a7b;
+      transition: width 0.4s ease;
+      border-radius: 2px;
+    }
+    #nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    #nav ul li a.active {
+      color: #d11a7b;
+    }
+    #nav ul li a.active::after {
+      width: 100%;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Agency and Web Design | Clear Digital</title>
+    <link rel="icon" href="https://www.cleardigital.com/favicon.ico" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans scroll-smooth bg-black text-white">
+    <video
+      autoplay
+      muted
+      loop
+      class="fixed right-0 bottom-0 w-full h-full object-cover -z-10"
+    >
+      <source src="./bg-video.mp4" type="video/mp4" />
+    </video>
+
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-5% z-50 transition-all duration-300 bg-transparent"
+    >
+      <div id="logo">
+        <h3
+          class="text-4xl font-bold text-white transition-colors duration-300"
+        >
+          Clear<span class="text-pink-600 text-xl font-bold">o</span>
+        </h3>
+      </div>
+
+      <div
+        id="menu-btn"
+        class="text-3xl text-white cursor-pointer md:hidden transition-colors duration-300"
+      >
+        ☰
+      </div>
+
+      <nav
+        id="nav"
+        class="hidden md:flex gap-10 items-center transition-all duration-300"
+      >
+        <a
+          href="#work"
+          class="relative text-lg text-white pb-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-1 after:w-0 after:bg-pink-600 after:rounded after:transition-all after:duration-300 hover:after:w-full hover:text-black"
+          >Work</a
+        >
+        <a
+          href="#approach"
+          class="relative text-lg text-white pb-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-1 after:w-0 after:bg-pink-600 after:rounded after:transition-all after:duration-300 hover:after:w-full hover:text-black"
+          >Approach</a
+        >
+        <a
+          href="#services"
+          class="relative text-lg text-white pb-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-1 after:w-0 after:bg-pink-600 after:rounded after:transition-all after:duration-300 hover:after:w-full hover:text-black"
+          >Services</a
+        >
+        <a
+          href="#insights"
+          class="relative text-lg text-white pb-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-1 after:w-0 after:bg-pink-600 after:rounded after:transition-all after:duration-300 hover:after:w-full hover:text-black"
+          >Insights</a
+        >
+        <a
+          href="#about"
+          class="relative text-lg text-white pb-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-1 after:w-0 after:bg-pink-600 after:rounded after:transition-all after:duration-300 hover:after:w-full hover:text-black"
+          >About</a
+        >
+      </nav>
+    </header>
+
+    <div class="h-20"></div>
+
+    <section
+      id="work"
+      class="w-full min-h-screen flex items-center justify-start px-[7%] pr-[8%] bg-black/40 text-left"
+    >
+      <div>
+        <p class="text-2xl mb-4 font-normal">Hello! We are Clear Digital</p>
+        <h1 class="text-[120px] font-bold leading-tight mb-6">
+          Let's take you to what's <span class="underline">next.</span>
+        </h1>
+        <a
+          href="#approach"
+          class="inline-block text-xl font-bold text-white border-b-2 border-white pb-1 hover:text-gray-300 hover:border-gray-300 transition"
+          >See how we work →</a
+        >
+      </div>
+    </section>
+
+    <section id="approach" class="relative w-full h-screen overflow-hidden">
+      <div
+        class="slider flex w-[300%] h-full transition-transform duration-700 ease-in-out"
+      >
+        <div class="w-screen h-screen flex-shrink-0 slide">
+          <img
+            src="./pexels-marta-klement-636760-1438081.jpg"
+            class="w-full h-full object-cover"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="w-screen h-screen flex-shrink-0 slide">
+          <img
+            src="./pexels-pixabay-301920.jpg"
+            class="w-full h-full object-cover"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="w-screen h-screen flex-shrink-0 slide">
+          <img
+            src="./pexels-tima-miroshnichenko-5427659.jpg"
+            class="w-full h-full object-cover"
+            alt="Slide 3"
+          />
+        </div>
+      </div>
+
+      <button
+        class="prev absolute top-1/2 left-5 -translate-y-1/2 text-4xl bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition"
+      >
+        ❮
+      </button>
+      <button
+        class="next absolute top-1/2 right-5 -translate-y-1/2 text-4xl bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition"
+      >
+        ❯
+      </button>
+
+      <div class="dots absolute bottom-5 w-full text-center">
+        <span
+          class="dot inline-block w-3 h-3 mx-1 rounded-full bg-white/60 cursor-pointer active:bg-white"
+        ></span>
+        <span
+          class="dot inline-block w-3 h-3 mx-1 rounded-full bg-white/60 cursor-pointer"
+        ></span>
+        <span
+          class="dot inline-block w-3 h-3 mx-1 rounded-full bg-white/60 cursor-pointer"
+        ></span>
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="relative w-full h-screen flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="./pexels-goumbik-574071.jpg"
+        class="w-full h-full object-cover blur-sm scale-110"
+        alt="Our Services"
+      />
+      <div
+        class="absolute text-center text-white bg-black/50 p-8 rounded-xl backdrop-blur-md"
+      >
+        <h2 class="text-5xl mb-4 text-gray-400">About Clear Digital</h2>
+        <p class="text-2xl italic font-serif text-yellow-200 max-w-xl mx-auto">
+          Clear Digital is like an extension of my team — they are always there
+          to provide support and get things done! Their level of expertise and
+          detail is second to none.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="insights"
+      class="py-20 px-[10%] bg-[#111] text-white text-center overflow-hidden"
+    >
+      <h2 class="text-4xl mb-10">Latest Insights</h2>
+      <div
+        class="grid gap-5 max-w-[1200px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <div class="relative overflow-hidden rounded-xl group">
+          <img
+            src="./pexels-ibertola-2681319.jpg"
+            class="w-full h-64 object-cover transition-transform duration-400 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-black/70 p-5 text-left transform translate-y-full group-hover:translate-y-0 transition-transform duration-400"
+          >
+            <h3 class="text-pink-500 text-lg">Design Innovation</h3>
+            <p class="text-sm text-gray-300">
+              How we create modern digital experiences.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl group">
+          <img
+            src="./pexels-veeterzy-303383.jpg"
+            class="w-full h-64 object-cover transition-transform duration-400 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-black/70 p-5 text-left transform translate-y-full group-hover:translate-y-0 transition-transform duration-400"
+          >
+            <h3 class="text-pink-600 text-lg">Marketing Growth</h3>
+            <p class="text-sm text-gray-300">
+              Strategies that boost your brand reach.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl group">
+          <img
+            src="./pexels-polina-kovaleva-5546809.jpg"
+            class="w-full h-64 object-cover transition-transform duration-400 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-black/70 p-5 text-left transform translate-y-full group-hover:translate-y-0 transition-transform duration-400"
+          >
+            <h3 class="text-pink-600 text-lg">Client Success</h3>
+            <p class="text-sm text-gray-300">
+              Case studies from our top projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl group">
+          <img
+            src="./pexels-pixabay-60504.jpg"
+            class="w-full h-64 object-cover transition-transform duration-400 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-black/70 p-5 text-left transform translate-y-full group-hover:translate-y-0 transition-transform duration-400"
+          >
+            <h3 class="text-pink-600 text-lg">Tech Trends</h3>
+            <p class="text-sm text-gray-300">
+              Latest technologies shaping the future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 px-[10%] bg-white text-gray-800">
+      <div
+        class="flex flex-wrap gap-10 items-center justify-between max-w-6xl mx-auto"
+      >
+        <div class="flex-1 min-w-[300px]">
+          <h2 class="text-5xl mb-6 text-pink-600">About Us</h2>
+          <p class="text-lg leading-relaxed text-gray-600 mb-6">
+            We are Clear Digital, a creative digital agency focused on web
+            design, development, and marketing. Our mission is to help brands
+            build strong digital presence and connect with their audience.
+          </p>
+          <ul class="mb-6 space-y-2 text-base">
+            <li>🚀 Innovative Design Solutions</li>
+            <li>🌍 Global Client Reach</li>
+            <li>🤝 Customer-Centric Approach</li>
+          </ul>
+          <a
+            href="#services"
+            class="inline-block px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition"
+            >Learn More</a
+          >
+        </div>
+        <div class="flex-1 min-w-[300px]">
+          <img
+            src="./pexels-pixabay-147413.jpg"
+            class="rounded-xl shadow-lg w-full"
+            alt="About Us"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-6">
+      <p>© 2025 Clear Digital. All Rights Reserved.</p>
+      <div class="mt-4 flex justify-center gap-6">
+        <a href="#" class="flex items-center gap-2 hover:scale-110 transition">
+          <i class="fab fa-facebook-f hover:text-blue-600"></i> Facebook
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:scale-110 transition">
+          <i class="fab fa-instagram hover:text-pink-500"></i> Instagram
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:scale-110 transition">
+          <i class="fab fa-linkedin-in hover:text-blue-500"></i> LinkedIn
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:scale-110 transition">
+          <i class="fab fa-github hover:text-gray-600"></i> GitHub
+        </a>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
